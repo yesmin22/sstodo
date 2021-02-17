@@ -1,0 +1,25 @@
+5,Area List,Primary,index.php?Page=AreaList,Management,1,4,Y,20001
+6,Director List,Primary,index.php?Page=DirList,Management,1,5,Y,20001
+7,Out Loan,Primary,index.php?Page=OutLoan,Management,1,6,Y,20001
+8,Bank List,Primary,index.php?Page=BnkList,Management,1,7,Y,20001
+9,Voucher Category,Primary,index.php?Page=VouCat,Management,1,8,Y,20001
+10,DPS Scheme,Primary,index.php?Page=DPS,Management,1,9,Y,20001
+11,FDR Scheme,Primary,index.php?Page=FDR,Management,1,10,Y,20001
+12,Asset,Primary,index.php?Page=Asset,Management,1,11,Y,20001
+13,Adjustment,Primary,index.php?Page=Adjust,Management,1,12,Y,20001
+14,Holiday,Primary,index.php?Page=Holiday,Management,1,13,Y,20001
+15,Notice,Primary,index.php?Page=Notice,Management,1,14,Y,20001
+16,Accounts,Main,,Management,0,0,Y,20001
+17,New Member,Accounts,index.php?Page=NewMem,Management,16,1,Y,20001
+18,Members,Accounts,index.php?Page=MemList,Management,16,2,Y,20001
+19,All General AC,Accounts,index.php?Page=GenAC,Management,16,3,Y,20001
+20,All DPS AC,Accounts,index.php?Page=DPSAC,Management,16,4,Y,20001
+21,New DPS,Accounts,index.php?Page=NewDPS,Management,16,5,Y,20001
+22,FDR AC List,Accounts,index.php?Page=FDRACL,Management,16,6,Y,20001
+23,New FRD,Accounts,index.php?Page=NewFDR,Management,16,7,Y,20001
+24,All Loan AC,Accounts,index.php?Page=AlLoanAC,Management,16,8,Y,20001
+25,New Loan,Accounts,index.php?Page=NewLoan,Management,16,9,Y,20001
+26,All Share AC,Accounts,index.php?Page=AllShaAC,Management,16,10,Y,20001
+27,All CC AC,Accounts,index.php?Page=AllCCAC,Management,16,11,Y,20001
+28,Closing,Accounts,index.php?Page=Closing,Management,16,12,Y,20001
+29,Loan Application List,Accounts,index.php?Page=LoanApp,Management,16,13,Y,20001

@@ -1,0 +1,1117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | Somity Keeper</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Somitykeeper" name="author">
+    <meta content="CoinCrow is a microcredit system" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+                            <link href="http://demo.oslbd.org/fox/favicon.png" rel="shortcut icon">
+        <link href="http://demo.oslbd.org/fox/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="http://demo.oslbd.org/fox/favicon.png" rel="shortcut icon">
+    <link href="http://demo.oslbd.org/fox/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="http://demo.oslbd.org/fox/css/fastFont.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/dropzone/dist/dropzone.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/css/maince5a.css?version=4.4.1" rel="stylesheet">
+<link href="http://demo.oslbd.org/fox/icon_fonts_assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://demo.oslbd.org/fox/bower_components/jquery/dist/jquery.min.js"></script>
+<style>
+    .label{ color: black}
+    @font-face {
+        font-family: 'Kalpurush';
+        url('/fox/css/fonts/Kalpurush.woff') format('woff'), /* Modern Browsers */
+        url('/fox/css/fonts/Kalpurush.ttf')  format('truetype'), /* Safari, Android, iOS */
+        /*url('webfont.svg#svgFontName') format('svg'); */  /* Legacy iOS */
+    }
+    /* Hide HTML5 Up and Down arrows. */
+    input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+</style>
+        <style>
+        .label {
+            font-size: 14px !important;
+            font-weight: bold;
+            color: aliceblue !important;
+        }
+        .pt-user-name {
+            font-weight: bolder;
+        }
+
+        .custom{
+            font-size: 30px  !important;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        .el-tablo {
+            padding-left: 5px !important;
+        }
+        .table_head{
+            font-weight: bold !important;
+            color: aliceblue !important;
+            background-color: #F15F22;
+        }
+        .table_th {
+            font-size: 20 !important;
+        }
+        .cHead{
+            font-weight: bold !important;
+            color: aliceblue !important;
+            background-color: #F15F22;
+        }
+
+        .bg-success{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .cb_bg{
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+
+    </style>
+</head>
+<body class="">
+    <ul class="notification" id="notification"
+        style="bottom: 1px; display: block; max-width: 600px; position: fixed; left: 12px; text-align: left; z-index: 2500; list-style-type: none;">
+                    </ul>
+    <script type="text/javascript">
+        $(function () {
+            $(".notification a").attr({class: "btn btn-info btn-rounded"});
+            setTimeout(function () {
+                $("#notification li").hide("slow");
+            }, 10000);
+        });
+        $("#notification li").click(function () {
+            $(this).hide("slow");
+        })
+    </script>
+            <div class="all-wrapper solid-bg-all">
+                                <div class="layout-w">
+                                    <!--------------------START - Mobile Menu-------------------->
+                        <div class="menu-mobile menu-activated-on-click color-scheme-dark">
+                            <div class="mm-logo-buttons-w">
+                                <a class="mm-logo" href="/panel">
+                                                                            <img src="http://demo.oslbd.org/fox/img/logo.png">
+                                    
+                                                                                                            <span style="text-align: center">সমিতি কিপার ডেমো </span>
+                                    
+                                </a>
+                                <div class="mm-buttons">
+                                    <div class="content-panel-open">
+                                        <div class="os-icon os-icon-grid-circles"></div>
+                                    </div>
+                                    <div class="mobile-menu-trigger">
+                                        <div class="os-icon os-icon-hamburger-menu-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-and-user">
+                                <div class="logged-user-w">
+                                    <div class="avatar-w"><img alt=""
+                                                               src="http://demo.oslbd.org/storage/Profile">
+                                    </div>
+                                    <div class="logged-user-info-w">
+                                        <div
+                                            class="logged-user-name">(Admin)</div>
+                                        <div class="logged-user-role">
+                                                                                            Admin
+                                                                                        </div>
+                                    </div>
+                                </div>
+                                <!--------------------START - Mobile Menu List-------------------->
+                            <ul class="main-menu">
+    
+    
+    
+    
+    
+    
+    
+                    <li class=" has-sub-menu"><a href="#">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layers"></div>
+                </div>
+                <span>Primary</span></a>
+            <div class="sub-menu-w">
+                <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                        <li><a href="http://demo.oslbd.org/panel/dashboard-statistics">Dashboard</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/staff">Staff List</a></li>
+                       
+                        <li><a href="http://demo.oslbd.org/panel/branch">Branch List</a></li>
+                      
+                        <li><a href="http://demo.oslbd.org/panel/area">Area List</a></li>
+
+                        <li><a href="http://demo.oslbd.org/panel/director">Director List</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/out-loan">Out Loan</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/bank">Bank List</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/voucher/category">Voucher Category</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/savingStructure">DPS Scheme</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/fdr/scheme/create">FDR Scheme</a></li>
+                       
+                        
+                        <li><a href="http://demo.oslbd.org/panel/asset">Asset</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/adjustment">Adjustment</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/holiday">Holiday</a></li>
+
+                                                <li><a href="http://demo.oslbd.org/panel/m">Notice</a></li>
+                        
+
+                                                                                    <li><a href="http://demo.oslbd.org/panel/setting/single-update/sms/0" title="Click Here To SMS OFF" class="text-warning"  onclick="return confirm('Are you want to OFF SMS');">SMS On</a></li>
+                                                    
+                        
+                        
+                        <li><a href="http://demo.oslbd.org/panel/member-destroy">Delete</a></li>
+
+                        
+
+
+                    </ul>
+                </div>
+            </div>
+        </li>
+            
+
+        <li class=" has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-package"></div>
+            </div>
+            <span>Accounts</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+
+                                        <li><a href="http://demo.oslbd.org/panel/member/create">Add New Member</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/member">Members</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/general/account">All General AC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/savings">All DPS AC</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/savings/create">New DPS</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/fdr/account">FDR AC List</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/fdr/account/create">New FDR</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/invest">All Loan AC</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/invest/create">New Loan</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/share/account">All Share AC</a></li>
+
+                        <li><a href="http://demo.oslbd.org/panel/cc/account">All CC AC</a></li>
+
+                                            <li><a href="http://demo.oslbd.org/panel/close/search">Closing</a></li>
+                                                                <li><a href="http://demo.oslbd.org/panel/loanapplication">Loan Application list</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class=" has-sub-menu"><a href="#">
+        <div class="icon-w">
+            <div class="os-icon os-icon-file-text"></div>
+        </div>
+                    <span>Credits</span></a>
+                <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                     <!-- <= 4 -->
+
+                    <li><a href="http://demo.oslbd.org/panel/collection/common">Common Collection</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/general/transaction/deposit">Deposit to General AC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/installment/collect">Installment Collection</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/share/search">Purchase / Sale Share</a></li>
+                    <li><a href="http://demo.oslbd.org/dps/deposit/create">Deposit to DPS</a></li>
+                                            <li><a href="http://demo.oslbd.org/collect/bank-withdraw">Bank Withdrawal</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/cc/installment/collect">CC Inst. Coll</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/cc/installment/closing " data-toggle="tooltip" data-placement="right" title="CC loan Closing">CC Closing</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+                    <li class=" has-sub-menu"><a href="#">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-life-buoy"></div>
+                </div>
+                <span>Debits</span></a>
+            <div class="sub-menu-w">
+                <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                        <li><a href="http://demo.oslbd.org/panel/general/transaction/withdraw">General Savings Withdraw</a></li>
+                        <li><a href="http://demo.oslbd.org/dps/withdraw/create">DPS Withdraw</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/fdr/profit">FDR Profit Withdraw</a></li>
+                        <li><a href="http://demo.oslbd.org/expense/bank-deposit">Bank Deposit</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/dps/closing">DPS Closing</a></li>
+                        <!-- <li><a href="http://demo.oslbd.org/panel/fdr/fdr-balance-withdraw">FDR Balance Withdraw</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </li>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <li class=" has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-minus-square"></div>
+            </div>
+            <span>Voucher</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                    <li><a href="http://demo.oslbd.org/panel/voucher/expense">General Expenditure</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/voucher/approve">For Approval</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/voucher/income">General Income</a></li>
+                    <li><a href="http://demo.oslbd.org/salary/sheet-generate">Salary Distribution</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/director/deposit">Deposit from Director</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/director/withdraw">Withdraw for Director</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/get-out-loan">Get Out Loan</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/return-out-loan">Return Out Loan</a></li>
+                    					<li><a href="http://demo.oslbd.org/loan-application-form">New Loan Application</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class=" has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-documents-03"></div>
+            </div>
+            <span>Reports</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                    
+                    <li><a href="http://demo.oslbd.org/panel/report/member-balance" data-toggle="tooltip" data-placement="right" title="Member Balance">Member Balance</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/user-collection" data-toggle="tooltip" data-placement="right" title="User collection">UC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/user-collection-summery " data-toggle="tooltip" data-placement="right" title="User collection summary">UCS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/date-wise-user-collection-summery " data-toggle="tooltip" data-placement="right" title="Date Wise User collection summary">DW.UCS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/general-ledger " data-toggle="tooltip" data-placement="right" title="General Ledger">GL</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/debit-credit-sheet " data-toggle="tooltip" data-placement="right" title="Debit Credit Sheet">Debit-Credit</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/performance-report " data-toggle="tooltip" data-placement="right" title="Performance report">PR</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/report/account-statement " data-toggle="tooltip" data-placement="right" title="Account Statement">AC/S</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/bank " data-toggle="tooltip" data-placement="right" title="Bank Statement">BS</a></li>
+                    <!-- <li><a href="http://demo.oslbd.org/panel/report/cash-position " data-toggle="tooltip" data-placement="right" title="Cash Position">CP</a></li> -->
+                    <li><a href="http://demo.oslbd.org/panel/report/income-expense " data-toggle="tooltip" data-placement="right" title="Income Expanse / Recieve & Payment report">IE</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/balance-sheet " data-toggle="tooltip" data-placement="right" title="Balance Sheet">Balance Sheet</a></li>
+					<li><a href="http://demo.oslbd.org/panel/report/cash-position">Cash Position</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/loss-profit " data-toggle="tooltip" data-placement="right" title="Loss / Profit Report">LP</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/invest-loc-report " data-toggle="tooltip" data-placement="right" title="Loan opening / Closing report">LOC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/withdraw-request-report " data-toggle="tooltip" data-placement="right" title="Withdrawal Request report">W.R.R</a></li>
+                    <li><a href="http://demo.oslbd.org/salary/salary-distribution-report " data-toggle="tooltip" data-placement="right" title="Salary Distribution report">SDR</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/installment-target " data-toggle="tooltip" data-placement="right" title="Installment target report">I.T.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/voucher-report " data-toggle="tooltip" data-placement="right" title="Voucher report">V.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/far " data-toggle="tooltip" data-placement="right" title="Fixed Asset report">F.A.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/faar " data-toggle="tooltip" data-placement="right" title="Fixed Asset adjustment report">F.A.A.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/director/director-filter " data-toggle="tooltip" data-placement="right" title="Director List parint">DR.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/director/director-transaction-filter " data-toggle="tooltip" data-placement="right" title="Director Transaction report">DR.T.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/avr-report " data-toggle="tooltip" data-placement="right" title="Asset Value report">A.V.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/dps-report " data-toggle="tooltip" data-placement="right" title="DPS report">D.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/fdr-report " data-toggle="tooltip" data-placement="right" title="FDR report">F.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/cash-in-report " data-toggle="tooltip" data-placement="right" title="Cash in report (area wise)">CI.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/cash-out-report " data-toggle="tooltip" data-placement="right" title="Cash out report (area wise)">CO.R</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class="has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-documents-03"></div>
+            </div>
+            <span>Misc</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+
+
+                    <li><a href="http://demo.oslbd.org/panel/report/member " data-toggle="tooltip" data-placement="right" title="Area wise member report">A.W.M.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/monthly-balance " data-toggle="tooltip" data-placement="right" title="Monthly Balance">Monthly Balance</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/mwcs " data-toggle="tooltip" data-placement="right" title="Member Wise Collection Summary">MWCS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/sheet " data-toggle="tooltip" data-placement="right" title="Collection Sheet">Collection Sheet</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/daily-closing-report " data-toggle="tooltip" data-placement="right" title="Daily Closing Report">D.C</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/daily-single-report " data-toggle="tooltip" data-placement="right" title="Day Summary">D.S</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/member-sheet">Member Sheet</a></li>
+
+
+                                        <li><a href="http://demo.oslbd.org/panel/report/daily-collection " data-toggle="tooltip" data-placement="right" title="Daily Collection sheet print">D.C.S Print</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/staff">Staff Report</a></li>
+                    <li><a href="http://demo.oslbd.org/yearly-profit-distribution " data-toggle="tooltip" data-placement="right" title="Yearly Profit Distribution">Y.P.D</a></li>
+                    <li><a href="http://demo.oslbd.org/yearly-profit-distribution-report " data-toggle="tooltip" data-placement="right" title="Yearly Profit Distribution report">Y.P.D Report</a></li>
+                    <li><a href="http://demo.oslbd.org/withdraw-request-list " data-toggle="tooltip" data-placement="right" title="Withdrawal request">W.R</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/cc/report " data-toggle="tooltip" data-placement="right" title="CC loan report">CC Report</a></li>
+                    <!-- <li><a href="http://demo.oslbd.org/panel/weekly-summary " data-toggle="tooltip" data-placement="right" title="Weekly summary">W.S</a></li> -->
+                    <li><a href="http://demo.oslbd.org/panel/report/staff-collection-report " data-toggle="tooltip" data-placement="right" title="Staff collection report">S.C.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/date-wise-profit-summary " data-toggle="tooltip" data-placement="right" title="Date Wise Profit summary">DWPS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/cashClosing " data-toggle="tooltip" data-placement="right" title="Cash Closing">Cash Closing</a></li>
+
+                                        <li><a href="http://demo.oslbd.org/panel/cash-transfer " data-toggle="tooltip" data-placement="right" title="Staff collection report">Cash transfer</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/cash-transfer-list " data-toggle="tooltip" data-placement="right" title="Staff collection report">Cash transfer List</a></li>
+                    
+                    <li><a href="http://demo.oslbd.org/panel/report/installment-schedule " data-toggle="tooltip" data-placement="right" title="Installment schedule">Installment schedule</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+    
+        <li class="has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-mail-01"></div>
+            </div>
+            <span>SMS</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                         
+                         <li><a href="http://demo.oslbd.org/panel/sms/bulk">Send Bulk SMS</a></li>
+                         <li><a href="http://demo.oslbd.org/panel/sms">Send Single SMS</a></li>
+
+                         <li><a href="http://sms.akandit.net/default.php" target="blank">SMS Panel / Balance check & Recharge</a></li>
+                         <li><a href="http://demo.oslbd.org/panel/setting/notification">SMS Templates</a></li>
+
+                         <li><a href="http://demo.oslbd.org/panel/sms/report">SMS Report</a></li>
+
+                                    </ul>
+            </div>
+        </div>
+    </li>
+    
+
+
+    <li class="has-sub-menu"><a href="#" title="Support & Help">
+            <div class="icon-w">
+                <div class="os-icon os-icon-help-circle"></div>
+            </div>
+            <span>Help</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                     <li><a href="https://somitykeeper.com/how-to-start" target="blank">How to Start?</a></li>
+
+                     <!--<li><a href="http://somitykeeper.com/tutorial" target="blank">Tutorials</a></li>-->
+
+
+                                            <li><a href="http://demo.oslbd.org/panel/info">System Info</a></li>
+                    
+                    <li><a href="https://somitykeeper.com/timeline" target="blank">Timeline</a></li>
+                    <li><a href="https://www.facebook.com/shomitikeepr" target="blank">Join in Facebook</a></li>
+                  
+                    <li><a href="https://somitykeeper.com/software/" target="blank">Support software</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/backup" target="blank">Create Backup</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/data-clear" target="blank">Data Clear</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </li>
+
+
+    <li><a href="http://stock.businesskeeperbd.info/login" target="blank" data-toggle="tooltip" data-placement="right" title="Stock Management System">
+            <div class="icon-w">
+                <div class="os-icon os-icon-package"></div>
+            </div>
+            <span>Stock</span>
+        </a>
+    </li>
+
+    <li><a href="http://demo.oslbd.org/logout">
+            <div class="icon-w">
+                <div class="os-icon os-icon-log-out"></div>
+            </div>
+            <span>Logout</span>
+        </a>
+    </li>
+</ul>
+                            <!--------------------END - Mobile Menu List-------------------->
+                                
+                                                            </div>
+                        </div>
+                        <!--------------------END - Mobile Menu-------------------->
+                        <!--------------------START - Main Menu-------------------->
+                        <div
+                            class="menu-w color-scheme-light color-style-default menu-position-top menu-layout-compact sub-menu-style-inside sub-menu-color-bright selected-menu-color-bright menu-activated-on-click menu-has-selected-link"
+                            style="margin-bottom: 0px; z-index: 999">
+                            <div class="logo-w"><a class="logo" href="/panel">
+                                                                            <img src="http://demo.oslbd.org/storage/SquareLogo.jpg">
+                                                                    </a></div>
+                            <ul class="main-menu">
+    
+    
+    
+    
+    
+    
+    
+                    <li class=" has-sub-menu"><a href="#">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layers"></div>
+                </div>
+                <span>Primary</span></a>
+            <div class="sub-menu-w">
+                <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                        <li><a href="http://demo.oslbd.org/panel/dashboard-statistics">Dashboard</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/staff">Staff List</a></li>
+                       
+                        <li><a href="http://demo.oslbd.org/panel/branch">Branch List</a></li>
+                      
+                        <li><a href="http://demo.oslbd.org/panel/area">Area List</a></li>
+
+                        <li><a href="http://demo.oslbd.org/panel/director">Director List</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/out-loan">Out Loan</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/bank">Bank List</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/voucher/category">Voucher Category</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/savingStructure">DPS Scheme</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/fdr/scheme/create">FDR Scheme</a></li>
+                       
+                        
+                        <li><a href="http://demo.oslbd.org/panel/asset">Asset</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/adjustment">Adjustment</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/holiday">Holiday</a></li>
+
+                                                <li><a href="http://demo.oslbd.org/panel/m">Notice</a></li>
+                        
+
+                                                                                    <li><a href="http://demo.oslbd.org/panel/setting/single-update/sms/0" title="Click Here To SMS OFF" class="text-warning"  onclick="return confirm('Are you want to OFF SMS');">SMS On</a></li>
+                                                    
+                        
+                        
+                        <li><a href="http://demo.oslbd.org/panel/member-destroy">Delete</a></li>
+
+                        
+
+
+                    </ul>
+                </div>
+            </div>
+        </li>
+            
+
+        <li class=" has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-package"></div>
+            </div>
+            <span>Accounts</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+
+                                        <li><a href="http://demo.oslbd.org/panel/member/create">Add New Member</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/member">Members</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/general/account">All General AC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/savings">All DPS AC</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/savings/create">New DPS</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/fdr/account">FDR AC List</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/fdr/account/create">New FDR</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/invest">All Loan AC</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/invest/create">New Loan</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/share/account">All Share AC</a></li>
+
+                        <li><a href="http://demo.oslbd.org/panel/cc/account">All CC AC</a></li>
+
+                                            <li><a href="http://demo.oslbd.org/panel/close/search">Closing</a></li>
+                                                                <li><a href="http://demo.oslbd.org/panel/loanapplication">Loan Application list</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class=" has-sub-menu"><a href="#">
+        <div class="icon-w">
+            <div class="os-icon os-icon-file-text"></div>
+        </div>
+                    <span>Credits</span></a>
+                <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                     <!-- <= 4 -->
+
+                    <li><a href="http://demo.oslbd.org/panel/collection/common">Common Collection</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/general/transaction/deposit">Deposit to General AC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/installment/collect">Installment Collection</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/share/search">Purchase / Sale Share</a></li>
+                    <li><a href="http://demo.oslbd.org/dps/deposit/create">Deposit to DPS</a></li>
+                                            <li><a href="http://demo.oslbd.org/collect/bank-withdraw">Bank Withdrawal</a></li>
+                                        <li><a href="http://demo.oslbd.org/panel/cc/installment/collect">CC Inst. Coll</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/cc/installment/closing " data-toggle="tooltip" data-placement="right" title="CC loan Closing">CC Closing</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+                    <li class=" has-sub-menu"><a href="#">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-life-buoy"></div>
+                </div>
+                <span>Debits</span></a>
+            <div class="sub-menu-w">
+                <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                        <li><a href="http://demo.oslbd.org/panel/general/transaction/withdraw">General Savings Withdraw</a></li>
+                        <li><a href="http://demo.oslbd.org/dps/withdraw/create">DPS Withdraw</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/fdr/profit">FDR Profit Withdraw</a></li>
+                        <li><a href="http://demo.oslbd.org/expense/bank-deposit">Bank Deposit</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/dps/closing">DPS Closing</a></li>
+                        <!-- <li><a href="http://demo.oslbd.org/panel/fdr/fdr-balance-withdraw">FDR Balance Withdraw</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </li>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <li class=" has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-minus-square"></div>
+            </div>
+            <span>Voucher</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                    <li><a href="http://demo.oslbd.org/panel/voucher/expense">General Expenditure</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/voucher/approve">For Approval</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/voucher/income">General Income</a></li>
+                    <li><a href="http://demo.oslbd.org/salary/sheet-generate">Salary Distribution</a></li>
+                                            <li><a href="http://demo.oslbd.org/panel/director/deposit">Deposit from Director</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/director/withdraw">Withdraw for Director</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/get-out-loan">Get Out Loan</a></li>
+                        <li><a href="http://demo.oslbd.org/panel/return-out-loan">Return Out Loan</a></li>
+                    					<li><a href="http://demo.oslbd.org/loan-application-form">New Loan Application</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class=" has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-documents-03"></div>
+            </div>
+            <span>Reports</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                    
+                    <li><a href="http://demo.oslbd.org/panel/report/member-balance" data-toggle="tooltip" data-placement="right" title="Member Balance">Member Balance</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/user-collection" data-toggle="tooltip" data-placement="right" title="User collection">UC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/user-collection-summery " data-toggle="tooltip" data-placement="right" title="User collection summary">UCS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/date-wise-user-collection-summery " data-toggle="tooltip" data-placement="right" title="Date Wise User collection summary">DW.UCS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/general-ledger " data-toggle="tooltip" data-placement="right" title="General Ledger">GL</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/debit-credit-sheet " data-toggle="tooltip" data-placement="right" title="Debit Credit Sheet">Debit-Credit</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/performance-report " data-toggle="tooltip" data-placement="right" title="Performance report">PR</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/report/account-statement " data-toggle="tooltip" data-placement="right" title="Account Statement">AC/S</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/bank " data-toggle="tooltip" data-placement="right" title="Bank Statement">BS</a></li>
+                    <!-- <li><a href="http://demo.oslbd.org/panel/report/cash-position " data-toggle="tooltip" data-placement="right" title="Cash Position">CP</a></li> -->
+                    <li><a href="http://demo.oslbd.org/panel/report/income-expense " data-toggle="tooltip" data-placement="right" title="Income Expanse / Recieve & Payment report">IE</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/balance-sheet " data-toggle="tooltip" data-placement="right" title="Balance Sheet">Balance Sheet</a></li>
+					<li><a href="http://demo.oslbd.org/panel/report/cash-position">Cash Position</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/loss-profit " data-toggle="tooltip" data-placement="right" title="Loss / Profit Report">LP</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/invest-loc-report " data-toggle="tooltip" data-placement="right" title="Loan opening / Closing report">LOC</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/withdraw-request-report " data-toggle="tooltip" data-placement="right" title="Withdrawal Request report">W.R.R</a></li>
+                    <li><a href="http://demo.oslbd.org/salary/salary-distribution-report " data-toggle="tooltip" data-placement="right" title="Salary Distribution report">SDR</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/installment-target " data-toggle="tooltip" data-placement="right" title="Installment target report">I.T.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/voucher-report " data-toggle="tooltip" data-placement="right" title="Voucher report">V.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/far " data-toggle="tooltip" data-placement="right" title="Fixed Asset report">F.A.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/faar " data-toggle="tooltip" data-placement="right" title="Fixed Asset adjustment report">F.A.A.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/director/director-filter " data-toggle="tooltip" data-placement="right" title="Director List parint">DR.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/director/director-transaction-filter " data-toggle="tooltip" data-placement="right" title="Director Transaction report">DR.T.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/avr-report " data-toggle="tooltip" data-placement="right" title="Asset Value report">A.V.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/dps-report " data-toggle="tooltip" data-placement="right" title="DPS report">D.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/fdr-report " data-toggle="tooltip" data-placement="right" title="FDR report">F.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/cash-in-report " data-toggle="tooltip" data-placement="right" title="Cash in report (area wise)">CI.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/cash-out-report " data-toggle="tooltip" data-placement="right" title="Cash out report (area wise)">CO.R</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class="has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-documents-03"></div>
+            </div>
+            <span>Misc</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+
+
+                    <li><a href="http://demo.oslbd.org/panel/report/member " data-toggle="tooltip" data-placement="right" title="Area wise member report">A.W.M.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/monthly-balance " data-toggle="tooltip" data-placement="right" title="Monthly Balance">Monthly Balance</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/mwcs " data-toggle="tooltip" data-placement="right" title="Member Wise Collection Summary">MWCS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/sheet " data-toggle="tooltip" data-placement="right" title="Collection Sheet">Collection Sheet</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/daily-closing-report " data-toggle="tooltip" data-placement="right" title="Daily Closing Report">D.C</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/daily-single-report " data-toggle="tooltip" data-placement="right" title="Day Summary">D.S</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/member-sheet">Member Sheet</a></li>
+
+
+                                        <li><a href="http://demo.oslbd.org/panel/report/daily-collection " data-toggle="tooltip" data-placement="right" title="Daily Collection sheet print">D.C.S Print</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/staff">Staff Report</a></li>
+                    <li><a href="http://demo.oslbd.org/yearly-profit-distribution " data-toggle="tooltip" data-placement="right" title="Yearly Profit Distribution">Y.P.D</a></li>
+                    <li><a href="http://demo.oslbd.org/yearly-profit-distribution-report " data-toggle="tooltip" data-placement="right" title="Yearly Profit Distribution report">Y.P.D Report</a></li>
+                    <li><a href="http://demo.oslbd.org/withdraw-request-list " data-toggle="tooltip" data-placement="right" title="Withdrawal request">W.R</a></li>
+
+                    <li><a href="http://demo.oslbd.org/panel/cc/report " data-toggle="tooltip" data-placement="right" title="CC loan report">CC Report</a></li>
+                    <!-- <li><a href="http://demo.oslbd.org/panel/weekly-summary " data-toggle="tooltip" data-placement="right" title="Weekly summary">W.S</a></li> -->
+                    <li><a href="http://demo.oslbd.org/panel/report/staff-collection-report " data-toggle="tooltip" data-placement="right" title="Staff collection report">S.C.R</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/report/date-wise-profit-summary " data-toggle="tooltip" data-placement="right" title="Date Wise Profit summary">DWPS</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/cashClosing " data-toggle="tooltip" data-placement="right" title="Cash Closing">Cash Closing</a></li>
+
+                                        <li><a href="http://demo.oslbd.org/panel/cash-transfer " data-toggle="tooltip" data-placement="right" title="Staff collection report">Cash transfer</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/cash-transfer-list " data-toggle="tooltip" data-placement="right" title="Staff collection report">Cash transfer List</a></li>
+                    
+                    <li><a href="http://demo.oslbd.org/panel/report/installment-schedule " data-toggle="tooltip" data-placement="right" title="Installment schedule">Installment schedule</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+    
+        <li class="has-sub-menu"><a href="#">
+            <div class="icon-w">
+                <div class="os-icon os-icon-mail-01"></div>
+            </div>
+            <span>SMS</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                         
+                         <li><a href="http://demo.oslbd.org/panel/sms/bulk">Send Bulk SMS</a></li>
+                         <li><a href="http://demo.oslbd.org/panel/sms">Send Single SMS</a></li>
+
+                         <li><a href="http://sms.akandit.net/default.php" target="blank">SMS Panel / Balance check & Recharge</a></li>
+                         <li><a href="http://demo.oslbd.org/panel/setting/notification">SMS Templates</a></li>
+
+                         <li><a href="http://demo.oslbd.org/panel/sms/report">SMS Report</a></li>
+
+                                    </ul>
+            </div>
+        </div>
+    </li>
+    
+
+
+    <li class="has-sub-menu"><a href="#" title="Support & Help">
+            <div class="icon-w">
+                <div class="os-icon os-icon-help-circle"></div>
+            </div>
+            <span>Help</span></a>
+        <div class="sub-menu-w">
+            <div class="sub-menu-i">
+                <ul class="sub-menu">
+                     <li><a href="https://somitykeeper.com/how-to-start" target="blank">How to Start?</a></li>
+
+                     <!--<li><a href="http://somitykeeper.com/tutorial" target="blank">Tutorials</a></li>-->
+
+
+                                            <li><a href="http://demo.oslbd.org/panel/info">System Info</a></li>
+                    
+                    <li><a href="https://somitykeeper.com/timeline" target="blank">Timeline</a></li>
+                    <li><a href="https://www.facebook.com/shomitikeepr" target="blank">Join in Facebook</a></li>
+                  
+                    <li><a href="https://somitykeeper.com/software/" target="blank">Support software</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/backup" target="blank">Create Backup</a></li>
+                    <li><a href="http://demo.oslbd.org/panel/data-clear" target="blank">Data Clear</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </li>
+
+
+    <li><a href="http://stock.businesskeeperbd.info/login" target="blank" data-toggle="tooltip" data-placement="right" title="Stock Management System">
+            <div class="icon-w">
+                <div class="os-icon os-icon-package"></div>
+            </div>
+            <span>Stock</span>
+        </a>
+    </li>
+
+    <li><a href="http://demo.oslbd.org/logout">
+            <div class="icon-w">
+                <div class="os-icon os-icon-log-out"></div>
+            </div>
+            <span>Logout</span>
+        </a>
+    </li>
+</ul>
+                                                            <div class="side-menu-magic"><h4></h4>
+                                    <p>Micro Credit System</p>
+                                    <div class="btn-w"><a class="btn btn-white btn-rounded"
+                                                          href="http://faisalalam.me"
+                                                          target="_blank">DEVELOPER</a></div>
+                                </div>
+                                                    </div>
+                        <!--------------------END - Main Menu-------------------->
+                                        <div class="content-w">
+                                                <div class="content-i">
+                            <div class="content-box">
+
+                                                                <marquee style="border-radius: 5px; background: #172601; color:#fff; font-size: 13px; padding: 2px; width: 100%; " >সমিতি কিপার ব্যবহার করার জন্য ধন্যবাদ।  প্রায় প্রতিটা সেকশনেই হেল্প বাটন আছে। আপনার প্রয়োজন অনুসারে ক্লিক করে শুনে নিবেন।</marquee>
+    
+     
+
+                        <div class="d-none d-md-block">
+                <div class="row" style="padding-bottom: 20px">
+                
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #04157a" href="#">
+                            <div class="label">সঞ্চয় জমা</div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #91040b" href="#">
+                            <div class="label">ডিপিএস জমা</div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #78044f" href="#">
+                            <div class="label">কিস্তি আদায় </div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #57057a" href="#">
+                            <div class="label">শেয়ার বিক্রি</div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div> 
+
+                </div>
+
+                <div class="row" style="padding-bottom: 10px">
+                
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #057180" href="#">
+                            <div class="label">এফডিআর জমা</div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #048058" href="#">
+                            <div class="label">সিসি লোনের কিস্তি</div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #048016" href="#">
+                            <div class="label">ভর্তি বাবদ </div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a class="element-box el-tablo" style="background: #7c8203" href="#">
+                            <div class="label">অন্যান্য আদায়</div>
+                            <div class="text-center custom">০ - ৳ </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                     
+        
+        
+   
+    
+            <div class="d-none d-md-block">
+            <div class="row" style="padding-bottom: 30px">
+
+                                
+                                    <img src="http://demo.oslbd.org/storage/BG.jpg" width="100%" height="100%">
+                            </div>
+        </div>
+    
+
+    <div class="d-block d-md-none">
+        <div class="row">
+            <div class="col-3 col-sm-3 col-xxl-2" >
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/general/transaction/deposit">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/savings.jpg" width="100%" height="100%">
+                        </div>
+                       <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">সঞ্চয় </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/installment/collect">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/installment.jpg" width="100%" height="100%">
+                        </div>
+                       <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">কিস্তি </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/dps/deposit/create">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/dps.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">ডিপিএস</div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/collection/common">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/admission.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">কমন </div>
+                    </a>
+                </div>
+            </div>
+            
+
+            
+           
+            <div class="col-3 col-sm-3 col-xxl-2" >
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/dashboard">
+                        <div class="pt-avatar-w">
+                            <img src="https://somitykeeper.com/wp-content/uploads/2020/11/live.jpg" width="100%" height="100%">
+                        </div>
+                      <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">লাইভ</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/voucher/expense">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/voucher.jpg" width="100%" height="100%">
+                        </div>
+                       <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">ভাউচার </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/share/search">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/saleShare.jpg" width="100%" height="100%">
+                        </div>
+                       <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">শেয়ার </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/report/user-collection">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/collections.jpg" width="100%" height="100%">
+                        </div>
+                    <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">আদায়কৃত</div>
+                    </a>
+                </div>
+            </div>
+            
+
+           
+                       
+            <div class="col-3 col-sm-3 col-xxl-2" >
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/member/create">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/admission.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; "> ভর্তি</div>
+                    </a>
+                </div>
+            </div>
+                        
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                     <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/cc/installment/collect">
+                        <div class="pt-avatar-w">
+                            <img src="https://somitykeeper.com/wp-content/uploads/2020/01/CC.jpg" width="100%" height="100%">
+                        </div>
+                       <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">সিসি কিস্তি</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/withdraw-request">
+                        <div class="pt-avatar-w">
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/withdraw.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">আবেদন</div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/panel/report/member-balance">
+                        <div class="pt-avatar-w"> 
+                            <img src="https://somitykeeper.com/wp-content/uploads/2020/11/Eye.jpg" width="100%" height="100%">
+                        </div>
+                      <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">এক নজরে</div>
+                    </a>
+                </div>
+            </div>
+
+            
+            
+         
+            
+            
+            <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                    <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/loan-application-form" target="__blank">
+                        <div class="pt-avatar-w">
+                           
+                            <img src="https://somitykeeper.com/wp-content/uploads/2020/06/loan.jpg" width="100%" height="100%">
+                        </div>
+                      <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">ঋণ আবেদন</div>
+                    </a>
+                </div>
+            </div>
+            
+             <div class="col-3 col-sm-3 col-xxl-2">
+                <div class="profile-tile profile-tile-inlined">
+                     <a class="profile-tile-box" style="margin: 0 auto" href="http://demo.oslbd.org/logout">
+                        <div class="pt-avatar-w"> 
+                            <img src="http://demo.oslbd.org/fox/img/dashboard/logout.jpg" width="100%" height="100%">
+                        </div>
+                      <div class="pt-user-name" style="background: #172601; font-size: 10px; padding: 1px; color: yellow; ">লগ আউট</div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+                                                        </div>
+                                                </div>
+                    </div>
+                </div>
+                <div class="display-type"></div>
+            </div>
+            <div class="text-center bg-light">
+                <p> &copy; <a class="mobile" href="https://facebook.com/shomitikeepr/">Support By Facbook</a>
+ !  ! <a href="tel:01403393868" target="__blank">Call: 01403393868</a> </p>
+            </div>
+            <!-- style="font-size: 15px; padding: 2px; width: 100%; text-align: center; "  -->
+            <!-- <hr style="background: #DB970F; ">  -->
+    </div>
+    <script src="http://demo.oslbd.org/fox/bower_components/popper.js/dist/umd/popper.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/moment/moment.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/chart.js/dist/Chart.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/ckeditor/ckeditor.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap-validator/dist/validator.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/dropzone/dist/dropzone.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/editable-table/mindmup-editabletable.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/tether/dist/js/tether.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/slick-carousel/slick/slick.min.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/util.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/alert.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/button.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/carousel.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/collapse.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/dropdown.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/modal.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/tab.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/tooltip.js"></script>
+<script src="http://demo.oslbd.org/fox/bower_components/bootstrap/js/dist/popover.js"></script>
+<script src="http://demo.oslbd.org/fox/js/demo_customizerce5a.js?version=4.4.1"></script>
+<script src="http://demo.oslbd.org/fox/js/dataTables.bootstrap4.min.js"></script>
+<script src="http://demo.oslbd.org/fox/js/maince5a.js?version=4.4.1"></script>
+<script type="text/javascript">
+    $("form").submit(function( event ) {
+        if ($(this).attr('note') !== '' && $(this).attr('note') !== 'undefined' && $(this).attr('note')){
+            if(!confirm($(this).attr('note'))){
+                event.preventDefault();
+            }
+        }
+    });
+</script>
+<script>
+    jQuery(document).ready( function($) {
+        // Disable scroll when focused on a number input.
+        $('form').on('focus', 'input[type=number]', function(e) {
+            $(this).on('wheel', function(e) {
+                e.preventDefault();
+            });
+        });
+        // Restore scroll on number inputs.
+        $('form').on('blur', 'input[type=number]', function(e) {
+            $(this).off('wheel');
+        });
+        // Disable up and down keys.
+        $('form').on('keydown', 'input[type=number]', function(e) {
+            if ( e.which == 38 || e.which == 40 )
+                e.preventDefault();
+        });
+    });
+</script>
+        <script type="text/javascript">
+        $("#audio_btn").click(function () {
+            $("#audio").toggle();
+        })
+    </script>
+</body>
+</html>
