@@ -35,7 +35,7 @@ if(isset($_POST['option_val'])) {
 					$html.=' value="'.$a_row['option_name'].'">
 					<span class="checkmark" id_value="'.$a_row['option_name'].'" id="checked_'.$a_row['option_name'].'"></span>
 				</label>
-				<label class="add-todo"';
+				<label class="add-todo" onmouseout=check_function('.$a_row['id'].','.$a_row['option_name'].')';
 				if($a_row['status']==2){
 					$html.=' style="text-decoration: line-through;color: #d9d9dd"';
 					}else{
