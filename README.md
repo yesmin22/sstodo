@@ -3,4 +3,4 @@
 Database Configuration
 Open phpmyadmin
 Create Database 'soms'
-Import database soms (2).sql (available inside zip package)
+Import database soms.sql (available inside zip package)
