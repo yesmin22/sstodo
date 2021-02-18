@@ -565,7 +565,7 @@ body {
       <label id="todosLeft" class="todos-left" aria-label="Number of to do tasks left to complete">Todos left:<span id="amount"> <?php echo $oResult_count->row['total_to_do'];?></span>
 </label>
       <div id="todoMenu2Buttons" class="todo-menu-2-buttons">
-        <button id="all_to_do" class="menu-2-button active" aria-label="Show all to do tasks">All</button>
+        <button id="all_to_do" class="menu-2-button" aria-label="Show all to do tasks">All</button>
         <button id="active" class="menu-2-button" aria-label="Show active to do tasks">Active</button>
         <button id="complete" class="menu-2-button" aria-label="Show completed to do tasks">Completed</button>
       </div>
@@ -680,10 +680,7 @@ $(document).on('click', '.button_cut' ,function (e) {
 
 
  $(document).on('click', '#active' ,function (e) {
-	$("#active").addClass("active");
-	$("#complete").removeClass("active"); 
-	$("#all_to_do").removeClass("active"); 
-	 
+	
 	 
 	manual_status='status1';
 	if(manual_status != "" || manual_status != "0") {
@@ -702,9 +699,7 @@ $(document).on('click', '.button_cut' ,function (e) {
 	}
 });
  $(document).on('click', '#complete' ,function (e) {
-	 $("#complete").addClass("active");
-	$("#active").removeClass("active"); 
-	$("#all_to_do").removeClass("active"); 
+	
 	manual_status='status2';
 	if(manual_status != "" || manual_status != "0") {
 		$.ajax({
@@ -724,9 +719,7 @@ $(document).on('click', '.button_cut' ,function (e) {
 
  $(document).ready(function() {
 $('#all_to_do').on('click', function() {
-	 $("#all_to_do").addClass("active");
-	$("#active").removeClass("active"); 
-	$("#complete").removeClass("active"); 
+	
 	var option_val= 1;
 	if(option_val != "" || option_val != "0") {
 		$.ajax({
